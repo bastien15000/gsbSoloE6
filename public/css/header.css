@@ -1,0 +1,62 @@
+.white_separator_bottom{
+	transform: rotate(180deg);
+	margin-bottom: -2px;
+}
+.titre{
+	margin-left: 10%;
+	color:white!important;
+	margin-top:8%;
+}
+h3{
+	font-size: 3.0rem!important;
+	color: white!important;
+	text-shadow: 1px 1px 5px black;
+}
+.banniere{
+	height:350px;
+	margin-top:-100px;
+    display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+	background-color: #9AAfAF;
+}
+.text-left{
+	margin: 3%;
+    font-size: xx-large;
+}
+#comments{
+	margin-top: 2%;
+    margin-bottom: 2%;
+}
+.container{
+	margin-bottom:2%;
+}
+
+/*accueil*/
+
+#accueil .bloc_header{
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    width:100%;
+    height:500px;
+    margin-top:-100px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#accueil .titre{
+    margin-left:10%;
+    color:white!important;
+}
+
+#accueil h1{
+    font-size: 5.5rem!important;
+    color:white!important;
+    text-shadow: 1px 1px 5px black;
+}
+
+#Calque_1{
+    margin-top:-100px;
+}
+

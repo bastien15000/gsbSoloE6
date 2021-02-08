@@ -1,0 +1,32 @@
+.formulaire {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+.formulaire table {
+  margin: auto;
+}
+.formulaire h1 {
+  font-size: 3em;
+}
+.formulaire label {
+  display: block;
+  margin-top: 1%;
+}
+.formulaire .btn {
+  margin-left: 20px;
+  margin-top: 26px;
+}
+.formulaire td {
+  display: inline-block;
+}
+.formulaire table {
+  margin-top: 3%;
+}
+
+.vue-medicaments {
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+/*# sourceMappingURL=consulter.css.map */

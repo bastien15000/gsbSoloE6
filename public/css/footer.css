@@ -1,0 +1,32 @@
+.bloc-footer {
+    background-color: #0b586d;
+    height: 280px;
+    width: 100%;
+    margin-top: -20px;
+}
+
+#footer {
+    z-index: 666;
+}
+
+#logo-footer {
+    margin-left: 20px;
+    margin-top: 62px;
+    height: 140px;
+    float: left;
+}
+
+.text-footer {
+    color: white;
+    float: right;
+    margin-top: 69px;
+    margin-right: 150px;
+    font-size: 20px;
+}
+
+.contact-section-footer {
+    margin-top: 20px;
+    line-height: 10px;
+    font-size: 15px;
+}
+

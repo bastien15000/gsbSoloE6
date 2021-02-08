@@ -1,0 +1,151 @@
+body{
+    font-family: 'Roboto', sans-serif!important;
+
+}
+
+/*Accueil*/
+
+.activity{
+    display: flex;
+    margin-top: 45px;
+}
+#accueil .texte p{
+    margin-right: 10%;
+    margin-left: 25%;
+    margin-bottom:5%;
+}
+#accueil .texte h4{
+    font-weight: bold;
+    margin-left:20%;
+    margin-bottom:4%;
+}
+#accueil .texte{
+    margin-top:2%;
+}
+
+#accueil .image{
+    margin-right:12%;
+    height:85%;
+    box-shadow: 10px 10px 20px rgb(85, 85, 85);
+}
+
+#accueil .plus{
+    margin-left:85%;
+}
+
+
+.products{
+    background-image: url('../images/blue.jpg') ;
+    margin-top:4%;
+    height:850px;
+}
+
+.boxes{
+    display:flex;
+    margin-top:2%;
+    justify-content: center;
+}
+.box1, .box2, .box3{
+    width:16%;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border:solid 1px rgb(156, 156, 156);
+    border-radius: 5px;
+}
+
+.box2{
+    margin-left:6%;
+    margin-right:6%;
+}
+
+.imgProduit{
+    width:200px;
+    margin-top:10%;
+    margin-bottom:10%;
+}
+
+.texteProduit{
+    margin:10%;
+}
+.voir{
+    margin-bottom:10%;
+}
+
+.Objectif{
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    margin-top:3%;
+}
+.corps_obj{
+    display:flex;
+    text-align: center;
+    justify-content: space-around;
+    margin-top:4%;
+    margin-bottom:4%;
+    font-weight: 700;
+}
+
+.title_obj h2{
+    font-weight: bold!important;
+}
+
+/*produits*/
+
+#produits img{
+	display: block;
+    margin: auto;
+}
+.blocProduits { 
+	display: flex;
+	flex-direction: row;
+	font-size: 15px;
+	color: #666;
+	justify-content: space-evenly;
+	margin-top:2%;
+	margin-bottom:2%;
+}
+.nosProduits {
+	width: 20%;
+	margin-right: 5%;
+	border: solid 2px;
+    border-radius: 10px;
+}
+.nosProduits section {
+	margin-top: 3%;
+	margin-left: 8%;
+}
+.nosProduits h6 {
+	font-weight: bold;
+}
+.ref {
+	font-size: 17px;
+}
+
+/*presentations*/
+
+.info{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:2%;
+}
+.image{
+    margin-top:2%;
+    margin-bottom:2%;
+}
+.repartition{
+    display:flex;
+    margin-right:20%;
+    margin-left:20%;
+}
+.repartition p{
+    margin-top:10%;
+}
+.titreBlack{
+    margin-left:10%;
+    color:black!important;
+}
