@@ -1,28 +1,28 @@
 <?php
 
-require(__DIR__.'/../../gsbIntra/model/model.php');
+require(__DIR__.'/../../gsbSoloE6/model/model.php');
 
 function index()
 {
-    require(__DIR__.'/../../gsbIntra/index.php');
+    require(__DIR__.'/../../gsbSoloE6/index.php');
 }
 
 function familles()
 {
 	$lesfam = getFamilles(); 
-    require(__DIR__.'/../../gsbIntra/view/familles.php');
+    require(__DIR__.'/../../gsbSoloE6/view/familles.php');
 }
 
 function medicaments()
 {
 	$lesMedicaments = getMedicaments(); 
-    require(__DIR__.'/../../gsbIntra/view/medicaments.php');
+    require(__DIR__.'/../../gsbSoloE6/view/medicaments.php');
 }
 
 function medicamentsFromF($idFamille)
 {
 	$lesMedicaments = getMedicamentsFromFamille($idFamille); 
-    require(__DIR__.'/../../gsbIntra/view/medicaments.php');
+    require(__DIR__.'/../../gsbSoloE6/view/medicaments.php');
 }
 
 function addFamille($id, $libelle)
@@ -33,7 +33,7 @@ function addFamille($id, $libelle)
         die('Impossible d\'ajouter la famille');
     }
     else{
-        ?><script> location.replace("/gsbIntra/routeur/routeurFamilles.php"); </script><?php
+        ?><script> location.replace("/gsbSoloE6/routeur/routeurFamilles.php"); </script><?php
     }
 }
 
@@ -45,7 +45,7 @@ function addMedicament($id, $nomCommercial, $idFamille, $composition, $effets, $
         die('Impossible d\'ajouter le médicament');
     }
     else{
-        ?><script> location.replace("/gsbIntra/routeur/routeurMedicaments.php"); </script><?php
+        ?><script> location.replace("/gsbSoloE6/routeur/routeurMedicaments.php"); </script><?php
     }
 }
 
@@ -57,7 +57,7 @@ function updateFamille($newId, $libelle, $oldId)
         die('Impossible de modifier la famille');
     }
     else{
-        ?><script> location.replace("/gsbIntra/routeur/routeurFamilles.php"); </script><?php
+        ?><script> location.replace("/gsbSoloE6/routeur/routeurFamilles.php"); </script><?php
     }
 }
 
@@ -69,20 +69,15 @@ function updateMedicament($newId, $nomCommercial, $idFamille, $composition, $eff
         die('Impossible de modifier le médicament');
     }
     else{
-        ?><script> location.replace("/gsbIntra/routeur/routeurMedicaments.php"); </script><?php
+        ?><script> location.replace("/gsbSoloE6/routeur/routeurMedicaments.php"); </script><?php
     }
 }
 
 function deleteFamille($id)
 {
     $delFamille = removeFamille($id);
-
-    if($delFamille == false){
-        die('Impossible de supprimer la famille');
-    }
-    else{
-        ?><script> location.replace("/gsbIntra/routeur/routeurFamilles.php"); </script><?php
-    }
+    
+    ?><script> location.replace("/gsbSoloE6/routeur/routeurFamilles.php"); </script><?php
 }
 
 function deleteMedicament($id)
@@ -93,12 +88,12 @@ function deleteMedicament($id)
         die('Impossible de supprimer le médicament');
     }
     else{
-        ?><script> location.replace("/gsbIntra/routeur/routeurMedicaments.php"); </script><?php
+        ?><script> location.replace("/gsbSoloE6/routeur/routeurMedicaments.php"); </script><?php
     }
 }
 
 function searchMedicament($id)
 {
     $lesMedicaments = findMedicament($id);
-    require(__DIR__.'/../../gsbIntra/view/medicaments.php');
+    require(__DIR__.'/../../gsbSoloE6/view/medicaments.php');
 }

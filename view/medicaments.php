@@ -1,16 +1,16 @@
 <!DOCTYPE html>
     <head>
         <title>Consulter</title>
-        <link rel="stylesheet" href="/gsbIntra/public/css/consulter.css">
+        <link rel="stylesheet" href="/gsbSoloE6/public/css/consulter.css">
         <meta charset="UTF-8">
     </head>
     <body>
     <?php 
     if(isset($_GET['idFamille'])){
-        ?><h1 class="vue-medicaments">Liste des médicaments de la famille <?=$_GET['idFamille']?></h1><?php
+        ?><h1 id="liste-medicaments" class="vue-medicaments">Liste des médicaments de la famille <?=$_GET['idFamille']?></h1><?php
     }
     else {
-        ?><h1 class="vue-medicaments">Liste des médicaments</h1><?php
+        ?><h1 id="liste-medicaments" class="vue-medicaments">Liste des médicaments</h1><a href="#" class="btn">Ajouter</a><?php
     }?> 
         <div class="vue-medicaments">
         <?php
@@ -20,7 +20,7 @@
                 {
                     $donnees['idFamille'] = $_GET['idFamille'];
                 }
-                echo '<h3>' . $donnees['id'] . ' : </h3>
+                echo '<h3 id="liste-medicaments">' . $donnees['id'] . ' : </h3><a href="#" class="btn">Modifier</a><a href="#" class="btn">Supprimer</a><p>
                 <p>Nom commercial : ' . $donnees['nomCommercial'] . '</p>
                 <p> Id Famille : ' . $donnees['idFamille'] . '</p>
                 <p>Composition : ' . $donnees['composition'] . '</p>

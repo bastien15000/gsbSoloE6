@@ -1,16 +1,18 @@
 <!DOCTYPE html>
     <head>
         <title>Consulter</title>
-        <link rel="stylesheet" href="/gsbIntra/public/css/consulter.css">
+        <link rel="stylesheet" href="/gsbSoloE6/public/css/consulter.css">
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1 class="vue-medicaments">Liste des familles de médicaments</h1>
+        <h1 id="liste-medicaments" class="vue-medicaments">Liste des familles de médicaments</h1><a href="#" class="btn">Ajouter</a>
         <div class="vue-medicaments">
         <?php
+            
             while($donnees = $lesfam->fetch())
             {
-                echo '<a href=routeurMedicaments.php?idFamille=' .$donnees['id']. '><h3>' . $donnees['id'] . ' : </h3></a><p>' . $donnees['libelle'] . '</p>';
+                echo '<a id="liste-medicaments" href="routeurMedicaments.php?idFamille="' .$donnees['id']. '><h3>' . $donnees['id'] . ' : </h3></a>
+                      <a href="#" class="btn">Modifier</a><a href="?action=deleteFamille" class="btn">Supprimer</a><p>' . $donnees['libelle'] . '</p>';
             }
         ?>
         </div>

@@ -29,4 +29,8 @@
   margin-left: 2%;
 }
 
+#liste-medicaments {
+  display: inline-block;
+}
+
 /*# sourceMappingURL=consulter.css.map */

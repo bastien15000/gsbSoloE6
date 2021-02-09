@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/gsbIntra/public/css/menu.css">
+  <link rel="stylesheet" href="/gsbSoloE6/public/css/menu.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="script.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light menuBack menuShadow">
-    <a class="navbar-brand" href="/gsbIntra"><img src="/gsbIntra/public/images/logo.png" style="height:70px;"/></a>
+    <a class="navbar-brand" href="/gsbSoloE6"><img src="/gsbSoloE6/public/images/logo.png" style="height:70px;"/></a>
     <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/gsbIntra">Accueil <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/gsbSoloE6">Accueil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/gsbIntra/view/presentation.php" aria-expanded="false">
+                <a class="nav-link" href="/gsbSoloE6/view/presentation.php" aria-expanded="false">
                 Présentation
                 </a>
                 <!--<div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
@@ -24,13 +24,13 @@
                 <a class="dropdown-item" href="routeur/routeur.php?page=medicaments">Medicament</a>-->
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/gsbIntra/routeur/routeurFamilles.php">Familles</a>
+                <a class="nav-link" href="/gsbSoloE6/routeur/routeurFamilles.php">Familles</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/gsbIntra/routeur/routeurMedicaments.php">Medicaments</a>
+                <a class="nav-link" href="/gsbSoloE6/routeur/routeurMedicaments.php">Medicaments</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" method="post" action="/gsbIntra/routeur/routeurMedicaments.php?action=searchMedicament">
+        <form class="form-inline my-2 my-lg-0" method="post" action="/gsbSoloE6/routeur/routeurMedicaments.php?action=searchMedicament">
             <input class="mr-sm-2 inputSearch" name="medicSearch" type="search" placeholder="Produit" aria-label="Search">
             <input class="btn" type="submit" value="Rechercher">
         </form>
