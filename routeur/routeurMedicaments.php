@@ -16,11 +16,7 @@
             }
         }
         elseif($_GET['action'] == 'deleteMedicament'){
-            if(!empty($_POST['id'])) {
-                deleteMedicament($_POST['id']);
-            } else {
-                echo "Veuillez remplir le champ de suppression médicament !";
-            }
+            deleteMedicament($_GET['idMedSupp']);
         }
         elseif($_GET['action'] == 'updateMedicament'){
             if(!empty($_POST['oldId']) && !empty($_POST['newId']) && !empty($_POST['nomCommercial']) && !empty($_POST['idFamille']) && !empty($_POST['composition']) && !empty($_POST['effets']) && !empty($_POST['contreIndications'])) {

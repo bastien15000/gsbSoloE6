@@ -11,8 +11,8 @@
             
             while($donnees = $lesfam->fetch())
             {
-                echo '<a id="liste-medicaments" href="routeurMedicaments.php?idFamille="' .$donnees['id']. '><h3>' . $donnees['id'] . ' : </h3></a>
-                      <a href="#" class="btn">Modifier</a><a href="?action=deleteFamille" class="btn">Supprimer</a><p>' . $donnees['libelle'] . '</p>';
+                echo '<a id=liste-medicaments href=routeurMedicaments.php?idFamille=' .$donnees['id']. '><h3>' . $donnees['id'] . ' : </h3></a>
+                      <a href="#" class="btn">Modifier</a><a href=?action=deleteFamille&amp;idFamSupp='.$donnees['id'].' class=btn>Supprimer</a><p>' . $donnees['libelle'] . '</p>';
             }
         ?>
         </div>
@@ -64,27 +64,6 @@
                             </td>
                             <td>
                                 <input class="btn" type="submit" value="Modifier">
-                            </td>
-                        </tr>
-                    </form>
-                </tbody>
-            </table>
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="3"><h1>Supprimer une famille : </h1></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <form action="?action=deleteFamille" method="post">
-                        <tr>
-                            <td>
-                                <label for="id">Id : </label>
-                                <input class="lastLine" class="text" id="id" name="id" type="text">
-                            </td>
-                            <td></td>
-                            <td>
-                                <input class="btn" type="submit" value="Supprimer">
                             </td>
                         </tr>
                     </form>

@@ -20,7 +20,7 @@
                 {
                     $donnees['idFamille'] = $_GET['idFamille'];
                 }
-                echo '<h3 id="liste-medicaments">' . $donnees['id'] . ' : </h3><a href="#" class="btn">Modifier</a><a href="#" class="btn">Supprimer</a><p>
+                echo '<h3 id="liste-medicaments">' . $donnees['id'] . ' : </h3><a href="#" class="btn">Modifier</a><a href=?action=deleteMedicament&amp;idMedSupp='.$donnees['id'].' class="btn">Supprimer</a><p>
                 <p>Nom commercial : ' . $donnees['nomCommercial'] . '</p>
                 <p> Id Famille : ' . $donnees['idFamille'] . '</p>
                 <p>Composition : ' . $donnees['composition'] . '</p>

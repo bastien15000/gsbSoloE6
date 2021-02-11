@@ -1,8 +1,5 @@
 <?php
 
-    session_start();
-    $_SESSION["thisIdFamille"];
-
     include(__DIR__.'/../../gsbSoloE6/view/partials/menu.php');
 
     require(__DIR__.'/../../gsbSoloE6/controleur/controleur.php');
@@ -19,7 +16,7 @@
             }
         }
         elseif($_GET['action'] == 'deleteFamille'){
-            deleteFamille($_SESSION["thisIdFamille"]);
+            deleteFamille($_GET['idFamSupp']);
         }
         elseif($_GET['action'] == 'updateFamille'){
             if(!empty($_POST['oldId']) && !empty($_POST['newId']) && !empty($_POST['libelle'])) {
@@ -32,6 +29,5 @@
     else {
         familles();
     }
-    echo $_SESSION["thisIdFamille"];
 
     include(__DIR__.'/../../gsbSoloE6/view/partials/footer.php');
