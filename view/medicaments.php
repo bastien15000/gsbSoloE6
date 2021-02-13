@@ -114,27 +114,6 @@
                     </form>
                 </tbody>
             </table>
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="3"> <h1>Supprimer un médicament : </h1></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <form action="?action=deleteMedicament" method="post">
-                        <tr>
-                            <td>
-                                <label for="id">Id : </label>
-                                <input class="lastLine" class="text" id="id" name="id" type="text">
-                            </td>
-                            <td></td>
-                            <td>
-                                <input class="btn" type="submit" value="Supprimer">
-                            </td>
-                        </tr>
-                    </form>
-                <tbody>
-            </table>
         </div>
     </body>
 </html>
