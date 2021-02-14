@@ -130,3 +130,24 @@ button.search{
 .formulaire td:nth-child(3) {
     width: 50px;
 }
+
+.formulaireMedic {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.formulaireMedic td {
+    width: 60px;
+    padding-left: 35px;
+}
+
+.formulaireMedic .btn {
+    margin-top: 25px;
+}
+
+.formulaireMedic h1 {
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+

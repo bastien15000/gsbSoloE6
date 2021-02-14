@@ -19,6 +19,8 @@
                         <input class="lastLine" id="libelle" name="libelle" type="text">
                     </td>
                     <td>
+                    </td>
+                    <td>
                         <input class="btn" type="submit" value="Ajouter">
                     </td>
                 </tr>
