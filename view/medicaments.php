@@ -20,7 +20,7 @@
                 {
                     $donnees['idFamille'] = $_GET['idFamille'];
                 }
-                echo '<h3 id="liste-medicaments">' . $donnees['id'] . ' : </h3><a href="#" class="btn">Modifier</a><a href=?action=deleteMedicament&amp;idMedSupp='.$donnees['id'].' class="btn">Supprimer</a><p>
+                echo '<h3 id="liste-medicaments">' . $donnees['id'] . ' : </h3><a href=../view/forms/modifMedic.php?idMedicModif=' .$donnees['id']. ' class="btn">Modifier</a><a href=?action=deleteMedicament&amp;idMedSupp='.$donnees['id'].' class="btn">Supprimer</a><p>
                 <p>Nom commercial : ' . $donnees['nomCommercial'] . '</p>
                 <p> Id Famille : ' . $donnees['idFamille'] . '</p>
                 <p>Composition : ' . $donnees['composition'] . '</p>
@@ -28,52 +28,6 @@
                 <p>Contre-Indications : ' . $donnees['contreIndications'] . ' </p>';
             }
         ?>
-        </div>
-        <div class="formulaire">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="8"><h1>Modifier un médicament : </h1></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <form action="?action=updateMedicament" method="post">
-                        <tr>
-                            <td>
-                                <label for="oldId">Id médicament à modifier : </label>
-                                <input class="text" id="oldId" name="oldId" type="text">
-                            </td>
-                            <td>
-                                <label for="newId">Modifier id : </label>
-                                <input class="text" id="newId" name="newId" type="text">
-                            </td>
-                            <td>
-                                <label for="nomCommercial">Modifier nom commercial : </label>
-                                <input class="text" id="nomCommercial" name="nomCommercial" type="text">
-                            </td>
-                            <td>
-                                <label for="idFamille">Modifier id Famille : </label>
-                                <input class="text" id="idFamille" name="idFamille" type="text">
-                            </td>
-                            <td>
-                                <label for="composition">Modifier composition : </label>
-                                <input id="composition" name="composition" type="text">
-                            </td>
-                            <td>
-                                <label for="effets">Modifier effets : </label>
-                                <input id="effets" name="effets" type="text">
-                            </td>
-                            <td>
-                                <label for="contreIndications">Modif contre-indications : </label>
-                                <input class="lastLine" id="contreIndications" name="contreIndications" type="text">
-                            </td>
-                            <td>
-                                <input class="btn" type="submit" value="Modifier">
-                            </td>
-                        </tr>
-                    </form>
-                </tbody>
-            </table>
         </div>
     </body>
 </html>

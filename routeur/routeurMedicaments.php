@@ -18,12 +18,8 @@
         elseif($_GET['action'] == 'deleteMedicament'){
             deleteMedicament($_GET['idMedSupp']);
         }
-        elseif($_GET['action'] == 'updateMedicament'){
-            if(!empty($_POST['oldId']) && !empty($_POST['newId']) && !empty($_POST['nomCommercial']) && !empty($_POST['idFamille']) && !empty($_POST['composition']) && !empty($_POST['effets']) && !empty($_POST['contreIndications'])) {
-                updateMedicament($_POST['newId'], $_POST['nomCommercial'], $_POST['idFamille'], $_POST['composition'], $_POST['effets'], $_POST['contreIndications'], $_POST['oldId']);
-            } else {
-                echo "Veuillez remplir les champs de modification médicament !";
-            }
+        elseif($_GET['action'] == 'updateMedicament'){   
+            updateMedicament($_POST['newId'], $_POST['nomCommercial'], $_POST['idFamille'], $_POST['composition'], $_POST['effets'], $_POST['contreIndications'], $_GET['idMedicModif']);
         }
         elseif($_GET['action'] == 'searchMedicament'){
             searchMedicament($_POST['medicSearch']);

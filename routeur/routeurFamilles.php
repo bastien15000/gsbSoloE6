@@ -19,11 +19,7 @@
             deleteFamille($_GET['idFamSupp']);
         }
         elseif($_GET['action'] == 'updateFamille'){
-            if(!empty($_POST['oldId']) && !empty($_POST['newId']) && !empty($_POST['libelle'])) {
-                updateFamille($_POST['newId'], $_POST['libelle'], $_POST['oldId']);
-            } else {
-                echo "Veuillez remplir les champs de modification famille !";
-            }
+            updateFamille($_POST['newId'], $_POST['libelle'], $_GET['idFamModif']);
         }
     }
     else {
