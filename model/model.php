@@ -73,6 +73,16 @@ function modifyFamille($newId, $libelle, $oldId)
     return $affectedLines;
 }
 
+function modifyFamille2($newId, $oldId)
+{
+	$db = dbConnect();
+
+	$requete = $db->prepare('UPDATE famille SET id = ? WHERE id = ?');  
+    $affectedLines = $requete->execute(array($newId, $oldId));
+
+    return $affectedLines;
+}
+
 function modifyMedicament($newId, $nomCommercial, $idFamille, $composition, $effets, $contreIndications, $oldId)
 {
 	$db = dbConnect();

@@ -61,6 +61,18 @@ function updateFamille($newId, $libelle, $oldId)
     }
 }
 
+function updateFamille2($newId, $oldId)
+{
+    $changeFamille = modifyFamille2($newId, $oldId);
+
+    if($changeFamille == false){
+        die('Impossible de modifier la famille');
+    }
+    else{
+        ?><script> location.replace("/gsbSoloE6/routeur/routeurFamilles.php"); </script><?php
+    }
+}
+
 function updateMedicament($newId, $nomCommercial, $idFamille, $composition, $effets, $contreIndications, $oldId)
 {
     $changeMedicament = modifyMedicament($newId, $nomCommercial, $idFamille, $composition, $effets, $contreIndications, $oldId);
