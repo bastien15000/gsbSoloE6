@@ -14,18 +14,20 @@
     }?> 
         <div class="vue-medicaments">
         <?php
-            while($donnees = $lesMedicaments->fetch())
-            {
-                if(isset($_GET['idFamille']))
-                {
+            while($donnees = $lesMedicaments->fetch()) {
+                if(isset($_GET['idFamille'])) {
                     $donnees['idFamille'] = $_GET['idFamille'];
                 }
-                echo '<h3 id="liste-medicaments">' . $donnees['id'] . ' : </h3><a href=../view/forms/modifMedic.php?idMedicModif=' .$donnees['id']. ' class="btn">Modifier</a><a href=?action=deleteMedicament&amp;idMedSupp='.$donnees['id'].' class="btn">Supprimer</a><p>
+
+                echo '<h3 id="liste-medicaments">' . $donnees['id'] . ' : </h3>
+                <a href=?action=getMedicament&amp;idMed='. $donnees['id'] . ' class="btn">Modifier</a>
+                <a href=?action=deleteMedicament&amp;idMedSupp='.$donnees['id'].' class="btn">Supprimer</a><p>
                 <p>Nom commercial : ' . $donnees['nomCommercial'] . '</p>
                 <p> Id Famille : ' . $donnees['idFamille'] . '</p>
                 <p>Composition : ' . $donnees['composition'] . '</p>
                 <p>Effets : ' . $donnees['effets'] . '</p>
                 <p>Contre-Indications : ' . $donnees['contreIndications'] . ' </p>';
+
             }
         ?>
         </div>

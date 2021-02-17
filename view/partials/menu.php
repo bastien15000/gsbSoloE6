@@ -5,7 +5,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/gsbSoloE6/public/css/menu.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="script.js"></script>
+  <script src="C:\wamp64\www\gsbSoloE6\public\js\script.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light menuBack menuShadow">

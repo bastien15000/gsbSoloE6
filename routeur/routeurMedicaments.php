@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     include(__DIR__.'/../../gsbSoloE6/view/partials/menu.php');
 
@@ -18,8 +19,30 @@
         elseif($_GET['action'] == 'deleteMedicament'){
             deleteMedicament($_GET['idMedSupp']);
         }
-        elseif($_GET['action'] == 'updateMedicament'){   
-            updateMedicament($_POST['newId'], $_POST['nomCommercial'], $_POST['idFamille'], $_POST['composition'], $_POST['effets'], $_POST['contreIndications'], $_GET['idMedicModif']);
+        elseif($_GET['action'] == 'updateMedicament'){//conditions indépendantes :
+
+            if(empty($_POST['newId'])) {
+                $_POST['newId'] = $_SESSION['oldId'];
+            }
+            if(empty($_POST['nomCommercial'])) {
+                $_POST['nomCommercial'] = $_SESSION['oldNomCommercial'];
+            }
+            if(empty($_POST['idFamille'])) {
+                $_POST['idFamille'] = $_SESSION['oldIdFamille'];
+            }
+            if(empty($_POST['composition'])) {
+                $_POST['composition'] = $_SESSION['oldComposition'];
+            }
+            if(empty($_POST['effets'])) {
+                $_POST['effets'] = $_SESSION['oldEffets'];
+            }
+            if(empty($_POST['contreIndications'])) {
+                $_POST['contreIndications'] = $_SESSION['oldContreIndics'];
+            }
+            updateMedicament($_POST['newId'], $_POST['nomCommercial'], $_POST['idFamille'], $_POST['composition'], $_POST['effets'], $_POST['contreIndications'], $_SESSION['oldId']);
+        }
+        elseif($_GET['action'] == 'getMedicament'){
+            medicament();
         }
         elseif($_GET['action'] == 'searchMedicament'){
             searchMedicament($_POST['medicSearch']);
@@ -31,5 +54,5 @@
     else {
         medicaments();
     }
-
+    
 include(__DIR__.'/../../gsbSoloE6/view/partials/footer.php');

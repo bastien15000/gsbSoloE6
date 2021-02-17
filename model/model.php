@@ -31,6 +31,16 @@ function getMedicaments()
     return $med;
 }
 
+function getMedicament($id)
+{
+	$db = dbConnect();
+
+	$med = $db->prepare("SELECT id, nomCommercial, idFamille, composition, effets, contreIndications FROM medicament WHERE id = ?;");
+	$med->execute(array($id));
+
+    return $med;
+}
+
 function getMedicamentsFromFamille($idFamille)
 {
 	$db = dbConnect();

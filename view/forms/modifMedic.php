@@ -1,6 +1,18 @@
-<?php include('../partials/menu.php');?>
+<?php 
 
-<div class="formulaire">
+while($donnee = $lesMedicaments->fetch()) {
+    if($donnee['id'] == $_GET['idMed']) {
+        $_SESSION['oldId'] = $_GET['idMed'];
+        $_SESSION['oldNomCommercial'] = $donnee['nomCommercial'];
+        $_SESSION['oldIdFamille'] = $donnee['idFamille'];
+        $_SESSION['oldComposition'] = $donnee['composition'];
+        $_SESSION['oldEffets'] = $donnee['effets'] ;
+        $_SESSION['oldContreIndics'] = $donnee['contreIndications'] ;
+    }
+}
+    
+?>
+        <div class="formulaire">
             <table>
                 <thead>
                     <tr>
@@ -8,7 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?='<form action=../../routeur/routeurMedicaments.php?action=updateMedicament&amp;idMedicModif=' . $_GET['idMedicModif'] . ' method=post>
+                <?='<form action=/gsbSoloE6/routeur/routeurMedicaments.php?action=updateMedicament method=post>
                         <tr>
                             <td>
                                 <label for="newId">Modifier id : </label>
@@ -42,5 +54,3 @@
                 </tbody>
             </table>
         </div>
-
-<?php include('../partials/footer.php');?>

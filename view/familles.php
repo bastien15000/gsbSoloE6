@@ -12,7 +12,8 @@
             while($donnees = $lesfam->fetch())
             {
                 echo '<a id=liste-medicaments href=routeurMedicaments.php?idFamille=' .$donnees['id']. '><h3>' . $donnees['id'] . ' : </h3></a>
-                      <a href=../view/forms/modifFam.php?idFamModif=' .$donnees['id']. ' class="btn">Modifier</a><a href=?action=deleteFamille&amp;idFamSupp='.$donnees['id'].' class=btn>Supprimer</a><p>' . $donnees['libelle'] . '</p>';
+                      <a href=../view/forms/modifFam.php?idFamModif=' .$donnees['id']. ' class="btn">Modifier</a>
+                      <a href=?action=deleteFamille&amp;idFamSupp='.$donnees['id'].' class=btn>Supprimer</a><p>' . $donnees['libelle'] . '</p>';
             }
         ?>
         </div>

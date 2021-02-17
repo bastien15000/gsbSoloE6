@@ -19,6 +19,12 @@ function medicaments()
     require(__DIR__.'/../../gsbSoloE6/view/medicaments.php');
 }
 
+function medicament()
+{
+	$lesMedicaments = getMedicaments();
+    require(__DIR__.'/../../gsbSoloE6/view/forms/modifMedic.php');
+}
+
 function medicamentsFromF($idFamille)
 {
 	$lesMedicaments = getMedicamentsFromFamille($idFamille); 
