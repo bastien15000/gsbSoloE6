@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
     </head>
     <body>
-    <?php 
+    <?php
     if(isset($_GET['idFamille'])){
         ?><h1 id="liste-medicaments" class="vue-medicaments">Liste des médicaments de la famille <?=$_GET['idFamille']?></h1><?php
     }
@@ -27,7 +27,6 @@
                 <p>Composition : ' . $donnees['composition'] . '</p>
                 <p>Effets : ' . $donnees['effets'] . '</p>
                 <p>Contre-Indications : ' . $donnees['contreIndications'] . ' </p>';
-
             }
         ?>
         </div>

@@ -127,10 +127,10 @@ function findMedicament($id)
 {
 	$db = dbConnect();
 
-	$requete = $db->prepare('SELECT * FROM medicament WHERE id LIKE ?%;');
-    $affectedLines = $requete->execute(array($id));
+	$requete = $db->prepare("SELECT id, nomCommercial, idFamille, composition, effets, contreIndications FROM medicament WHERE id LIKE ?");
+    $requete->execute(array("$id%"));
 
-    return $affectedLines;
+    return $requete;
 }
 
 

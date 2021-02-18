@@ -31,7 +31,7 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" method="post" action="/gsbSoloE6/routeur/routeurMedicaments.php?action=searchMedicament">
-            <input class="mr-sm-2 inputSearch" name="medicSearch" type="search" placeholder="Produit" aria-label="Search">
+            <input class="mr-sm-2 inputSearch" name="medicSearch" id="medicSearch" type="search" placeholder="Medicament" aria-label="Search">
             <input class="btn" type="submit" value="Rechercher">
         </form>
         <a class="icon" href="/gsb?page=connection">

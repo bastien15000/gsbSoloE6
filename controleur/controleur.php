@@ -113,5 +113,7 @@ function deleteMedicament($id)
 function searchMedicament($id)
 {
     $lesMedicaments = findMedicament($id);
+    
     require(__DIR__.'/../../gsbSoloE6/view/medicaments.php');
+    
 }
