@@ -5,30 +5,32 @@
         <meta charset="UTF-8">
     </head>
     <body>
-    <?php
-    if(isset($_GET['idFamille'])){
-        ?><h1 id="liste-medicaments" class="vue-medicaments">Liste des médicaments de la famille <?=$_GET['idFamille']?></h1><?php
-    }
-    else {
-        ?><h1 id="liste-medicaments" class="vue-medicaments">Liste des médicaments</h1><a href="../view/forms/ajoutMedic.php" class="btn">Ajouter</a><?php
-    }?> 
         <div class="vue-medicaments">
-        <?php
-            while($donnees = $lesMedicaments->fetch()) {
-                if(isset($_GET['idFamille'])) {
-                    $donnees['idFamille'] = $_GET['idFamille'];
-                }
-
-                echo '<h3 id="liste-medicaments">' . $donnees['id'] . ' : </h3>
-                <a href=?action=getMedicament&amp;idMed='. $donnees['id'] . ' class="btn">Modifier</a>
-                <a href=?action=deleteMedicament&amp;idMedSupp='.$donnees['id'].' class="btn">Supprimer</a><p>
-                <p>Nom commercial : ' . $donnees['nomCommercial'] . '</p>
-                <p> Id Famille : ' . $donnees['idFamille'] . '</p>
-                <p>Composition : ' . $donnees['composition'] . '</p>
-                <p>Effets : ' . $donnees['effets'] . '</p>
-                <p>Contre-Indications : ' . $donnees['contreIndications'] . ' </p>';
+            <?php
+            if(isset($_GET['idFamille'])){
+                ?><div id="bloc-titre"><h1 id="liste-titre" class="liste-medicaments">Liste des médicaments de la famille <?=$_GET['idFamille']?></h1></div><?php
             }
-        ?>
+            else {
+                ?><div id="bloc-titre"><h1 id="liste-titre" class="liste-medicaments">Liste des médicaments</h1><a href="../view/forms/ajoutMedic.php" id="crud" class="btn">Ajouter</a></div><?php
+            }?> 
+            <div class="les-medicaments">
+            <?php
+                while($donnees = $lesMedicaments->fetch()) {
+                    if(isset($_GET['idFamille'])) {
+                        $donnees['idFamille'] = $_GET['idFamille'];
+                    }
+
+                    echo '<div class="unMedic"><h3 id="liste-medicaments">' . $donnees['id'] . ' : </h3>
+                    <a href=?action=getMedicament&amp;idMed='. $donnees['id'] . ' class=btn id=crud>Modifier</a>
+                    <a href=?action=deleteMedicament&amp;idMedSupp='.$donnees['id'].' class=btn id=crud>Supprimer</a><p>
+                    <p>Nom commercial : ' . $donnees['nomCommercial'] . '</p>
+                    <p> Id Famille : ' . $donnees['idFamille'] . '</p>
+                    <p>Composition : ' . $donnees['composition'] . '</p>
+                    <p>Effets : ' . $donnees['effets'] . '</p>
+                    <p>Contre-Indications : ' . $donnees['contreIndications'] . ' </p></div>';
+                }
+            ?>
+            </div>
         </div>
     </body>
 </html>

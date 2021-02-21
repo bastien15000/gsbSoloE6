@@ -5,17 +5,19 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1 id="liste-medicaments" class="vue-medicaments">Liste des familles de médicaments</h1><a href="../view/forms/ajoutFam.php" class="btn">Ajouter</a>
         <div class="vue-medicaments">
-        <?php
+            <div id="bloc-titre"><h1 id="liste-titre" class="liste-medicaments">Liste des familles de médicaments</h1><a href="../view/forms/ajoutFam.php" class="btn" id="crud">Ajouter</a></div>
+            <div class="les-familles">
+            <?php
             
             while($donnees = $lesfam->fetch())
             {
-                echo '<a id=liste-medicaments href=routeurMedicaments.php?idFamille=' .$donnees['id']. '><h3>' . $donnees['id'] . ' : </h3></a>
-                      <a href=../view/forms/modifFam.php?idFamModif=' .$donnees['id']. ' class="btn">Modifier</a>
-                      <a href=?action=deleteFamille&amp;idFamSupp='.$donnees['id'].' class=btn>Supprimer</a><p>' . $donnees['libelle'] . '</p>';
+                echo '<div class="uneFamille"><a class=liste-medicaments href=routeurMedicaments.php?idFamille=' .$donnees['id']. '><h3 id=lien-medic>' . $donnees['id'] . ' : </h3></a>
+                      <a href=../view/forms/modifFam.php?idFamModif=' .$donnees['id']. ' class="btn" id=crud>Modifier</a>
+                      <a href=?action=deleteFamille&amp;idFamSupp='.$donnees['id'].' class=btn id=crud>Supprimer</a><p>' . $donnees['libelle'] . '</p></div>';
             }
-        ?>
+            ?>
+            </div>
         </div>
     </body>
 </html>

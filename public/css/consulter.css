@@ -3,34 +3,50 @@
   margin-bottom: 2%;
   text-align: center;
 }
-.formulaire table {
-  margin: auto;
-}
-.formulaire h1 {
-  font-size: 3em;
-}
-.formulaire label {
-  display: block;
-  margin-top: 1%;
-}
-.formulaire .btn {
-  margin-left: 20px;
-  margin-top: 26px;
-}
-.formulaire td {
-  display: inline-block;
-}
-.formulaire table {
-  margin-top: 3%;
+
+.uneFamille {
+  font-size: 25px;
 }
 
 .vue-medicaments {
   margin-top: 2%;
-  margin-left: 2%;
 }
 
 #liste-medicaments {
   display: inline-block;
+}
+
+#bloc-titre {
+  text-align: center;
+}
+
+#liste-titre {
+  font-size: 3.2em;
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
+#lien-medic {
+  display: inline-block;
+  font-size: 35px;
+}
+
+.les-familles {
+  width: 380px;
+  margin: auto;
+}
+
+#crud {
+  font-size: 22px;
+}
+
+.unMedic {
+  font-size: 21px;
+}
+
+.les-medicaments {
+  width: 990px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=consulter.css.map */

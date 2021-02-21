@@ -12,39 +12,39 @@ while($donnee = $lesMedicaments->fetch()) {
 }
     
 ?>
-        <div class="formulaire">
+        <div class="formulaireMedic">
             <table>
                 <thead>
                     <tr>
-                        <th colspan="8"><h1>Modifier un médicament : </h1></th>
+                        <th colspan="8"><?= "<h1 id=titre-formModif>Modifier " . $_GET['idMed'] . " </h1>"?></th>
                     </tr>
                 </thead>
                 <tbody>
                 <?='<form action=/gsbSoloE6/routeur/routeurMedicaments.php?action=updateMedicament method=post>
                         <tr>
                             <td>
-                                <label for="newId">Modifier id : </label>
+                                <label for="newId">Id : </label>
                                 <input class="text" id="newId" name="newId" type="text">
                             </td>
                             <td>
-                                <label for="nomCommercial">Modifier nom commercial : </label>
+                                <label for="nomCommercial">Nom commercial : </label>
                                 <input class="text" id="nomCommercial" name="nomCommercial" type="text">
                             </td>
                             <td>
-                                <label for="idFamille">Modifier id Famille : </label>
+                                <label for="idFamille">Id Famille : </label>
                                 <input class="text" id="idFamille" name="idFamille" type="text">
                             </td>
                             <td>
-                                <label for="composition">Modifier composition : </label>
+                                <label for="composition">Composition : </label>
                                 <input id="composition" name="composition" type="text">
                             </td>
                             <td>
-                                <label for="effets">Modifier effets : </label>
-                                <input id="effets" name="effets" type="text">
+                                <label for="effets">Effets : </label>
+                                <textarea rows=3 id="effets" name="effets" type="text"></textarea>
                             </td>
                             <td>
-                                <label for="contreIndications">Modif contre-indications : </label>
-                                <input class="lastLine" id="contreIndications" name="contreIndications" type="text">
+                                <label for="contreIndications">Contre-Indications : </label>
+                                <textarea rows=4 class="lastLine" id="contreIndications" name="contreIndications" type="text"></textarea>
                             </td>
                             <td>
                                 <input class="btn" type="submit" value="Modifier">

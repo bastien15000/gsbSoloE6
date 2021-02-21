@@ -2,39 +2,51 @@
     margin-top: 2%;
     margin-bottom: 2%;
     text-align: center;
+}
 
-    table {
-        margin: auto;
-    }
-    
-    h1 {
-        font-size: 3em;
-    }
-    
-    label {
-        display: block;
-        margin-top: 1%;
-    }
-
-    .btn {
-        margin-left: 20px;
-        margin-top: 26px;
-    }
-
-    td {
-        display: inline-block;
-    }
-
-    table {
-        margin-top: 3%;
-    }
+.uneFamille {
+    font-size: 25px;
 }
 
 .vue-medicaments {
     margin-top: 2%;
-    margin-left: 2%;
 }
 
 #liste-medicaments {
     display: inline-block;
+}
+
+#bloc-titre {
+    text-align: center;
+}
+
+#liste-titre {
+    font-size: 3.2em;
+    display: inline-block;
+    margin-bottom: 2%;
+}
+
+#lien-medic {
+    display: inline-block;
+    font-size: 35px;
+}
+
+.les-familles {
+    width: 380px;
+    margin: auto;
+}
+
+#crud {
+    font-size: 22px;
+}
+
+//design medics
+
+.unMedic {
+    font-size: 21px;
+}
+
+.les-medicaments {
+    width: 990px;
+    margin: auto;
 }

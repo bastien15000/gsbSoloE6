@@ -150,4 +150,13 @@ button.search{
     text-align: center;
 }
 
+#titre-formModif {
+    font-size: 50px;
+}
+
+.formulaireMedic label {
+    font-size: 20px;
+}
+
+
 
