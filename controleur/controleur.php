@@ -4,7 +4,7 @@ require(__DIR__.'/../../gsbSoloE6/model/model.php');
 
 function index()
 {
-    require(__DIR__.'/../../gsbSoloE6/index.php');
+    require(__DIR__.'/../../gsbSoloE6/login.php');
 }
 
 function familles()
