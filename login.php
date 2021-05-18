@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['username'];
+$_SESSION['password'];
 if(($_POST['username'] == 'Bastien') && ($_POST['password'] == 'bastien15000')) {
     $_SESSION['erreurConnexion'] = false; ?>
     <?php $title = 'GSB Accueil'; ?>
@@ -23,5 +24,6 @@ if(($_POST['username'] == 'Bastien') && ($_POST['password'] == 'bastien15000')) 
 
 } else {
     $_SESSION['username'] = $_POST['username'];
+    $_SESSION['password'] = $_POST['password'];
     header('Location: /gsbSoloE6/');
 }?>

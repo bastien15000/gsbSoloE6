@@ -35,9 +35,13 @@ session_start();
         </div>
     </section>
     <?php
-    if(!empty($_SESSION['username'])){
-        echo "<p>Vos identifiants sont faux (".$_SESSION['username']."), veuillez réessayer</p>";
-        $_SESSION['username'] = null ;
+    if(empty($_SESSION['username']) && empty($_SESSION['password'])) {
+        echo "<p>Veuillez remplir ces champs pour vous connecter</p>";
+    }
+    elseif($_SESSION['username'] != "Bastien" || $_SESSION['password'] != "bastien15000" && !empty($_SESSION['username']) || !empty($_SESSION['password'])){
+        echo "<p>Vos identifiants sont faux, veuillez réessayer</p>";
+        $_SESSION['username'] = null;
+        $_SESSION['password'] = null;
     }
     ?>
     </body>
